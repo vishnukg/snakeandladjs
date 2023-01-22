@@ -1,0 +1,15 @@
+{
+  "root": true,
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "allowImportExportEverywhere": true,
+    "sourceType": "module"
+  },
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "node": true,
+    "browser": true
+  }
+}
