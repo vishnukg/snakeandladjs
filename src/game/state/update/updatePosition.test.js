@@ -23,7 +23,7 @@ tap.test(
             positions: { player1: 0, player2: 0 }
         };
         const positions = {
-            player1: 4
+            player1: 5
         };
 
         const result = updatePosition(state, positions);
