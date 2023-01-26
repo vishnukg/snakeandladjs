@@ -2,7 +2,6 @@ import tap from 'tap';
 import board from './board.js';
 
 tap.test('Reading config', (t) => {
-    const boardConfig = board();
-    console.log(boardConfig[4].move);
+    console.log(board[4]);
     t.end();
 });
