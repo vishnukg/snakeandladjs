@@ -1,7 +1,8 @@
 import tap from 'tap';
 import board from './board.js';
 
-tap.test('Reading config', (t) => {
-    console.log(board[4]);
+tap.test('snake positions', (t) => {
+    const result = board[7];
+    t.equal(result.type, 'snake');
     t.end();
 });
