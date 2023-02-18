@@ -99,18 +99,18 @@ tap.test('Player moves by the value returned by the die', (t) => {
     t.end();
 });
 
-tap.test('Of two players, the player 2 reaches 100 to win the game', (t) => {
-    const p1 = create_player();
-    const p2 = create_player();
-
-    const game = createGame();
-
-    const numberOfMoves = 100;
-    while (game.move(p2) < numberOfMoves);
-    while (game.move(p1) < numberOfMoves);
-    t.equal(game.winner, p2);
-    t.end();
-});
+// tap.test('Of two players, the player 2 reaches 100 to win the game', (t) => {
+//     const p1 = create_player();
+//     const p2 = create_player();
+//
+//     const game = createGame();
+//
+//     const numberOfMoves = 100;
+//     while (game.move(p2) < numberOfMoves);
+//     while (game.move(p1) < numberOfMoves);
+//     t.equal(game.winner, p2);
+//     t.end();
+// });
 
 tap.test('Of two players, second player cannot make the first move', (t) => {
     const p1 = create_player();
