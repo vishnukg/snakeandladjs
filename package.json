@@ -5,12 +5,11 @@
     "main": "index.js",
     "type": "module",
     "scripts": {
-        "test": "c8 tap --no-coverage"
+        "test": "tap"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "c8": "^7.12.0",
-        "tap": "^16.3.4"
+        "tap": "^16.3.7"
     }
 }
