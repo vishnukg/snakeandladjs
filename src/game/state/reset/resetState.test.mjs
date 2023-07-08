@@ -1,5 +1,5 @@
 import tap from 'tap';
-import reset from './resetState.js';
+import reset from './resetState.mjs';
 
 tap.test('Reset function resets the state to inital value', (t) => {
     const state = {

@@ -1,5 +1,5 @@
 import tap from 'tap';
-import { rollDie } from './game/roll/index.js';
+import { rollDie } from './game/roll/index.mjs';
 
 const createGame = (firstPlayer) => {
     let winner;

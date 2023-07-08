@@ -1,4 +1,4 @@
-import updateResult from './updateResult.js';
+import updateResult from './updateResult.mjs';
 import tap from 'tap';
 
 tap.test('Updating game result', (t) => {

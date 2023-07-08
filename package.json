@@ -3,12 +3,14 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
-    "type": "module",
     "scripts": {
         "test": "tap"
     },
     "author": "",
     "license": "ISC",
+    "overrides": {
+        "semver": "^7.5.3"
+    },
     "devDependencies": {
         "tap": "^16.3.7"
     }

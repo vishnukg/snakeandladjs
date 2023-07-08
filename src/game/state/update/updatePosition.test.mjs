@@ -1,5 +1,5 @@
 import tap from 'tap';
-import updatePosition from './updatePosition.js';
+import updatePosition from './updatePosition.mjs';
 
 tap.test('Update player1 position', (t) => {
     const state = {

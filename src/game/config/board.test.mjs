@@ -1,5 +1,5 @@
 import tap from 'tap';
-import board from './board.js';
+import board from './board.mjs';
 
 tap.test('snake positions', (t) => {
     const result = board[7];

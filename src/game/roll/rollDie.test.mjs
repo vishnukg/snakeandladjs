@@ -1,5 +1,5 @@
 import tap from 'tap';
-import rollDie from './rollDie.js';
+import rollDie from './rollDie.mjs';
 
 tap.test('Roll die produces a value in range 1 to 6', (t) => {
     const outcomes = [1, 2, 3, 4, 5, 6];
