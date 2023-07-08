@@ -1,4 +1,5 @@
-import { test, assert } from 'vitest';
+import test from 'node:test';
+import assert from 'node:assert/strict';
 import reset from './resetState.mjs';
 
 test('Reset function resets the state to inital value', () => {

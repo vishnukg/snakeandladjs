@@ -1,4 +1,5 @@
-import { test, assert } from 'vitest';
+import test from 'node:test';
+import assert from 'node:assert/strict';
 import updatePosition from './updatePosition.mjs';
 
 test('Update player1 position', () => {

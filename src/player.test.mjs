@@ -1,4 +1,5 @@
-import { test, assert } from 'vitest';
+import test from 'node:test';
+import assert from 'node:assert/strict';
 import { rollDie } from './game/roll/index.mjs';
 
 const createGame = (firstPlayer) => {
