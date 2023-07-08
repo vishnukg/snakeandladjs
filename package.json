@@ -2,16 +2,18 @@
     "name": "snakeandladjs",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "index.mjs",
     "scripts": {
-        "test": "tap"
+        "test": "vitest run --coverage"
     },
     "author": "",
     "license": "ISC",
+    "devDependencies": {
+        "@vitest/coverage-v8": "^0.33.0",
+        "prettier": "3.0.0",
+        "vitest": "^0.33.0"
+    },
     "overrides": {
         "semver": "^7.5.3"
-    },
-    "devDependencies": {
-        "tap": "^16.3.7"
     }
 }

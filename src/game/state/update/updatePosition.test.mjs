@@ -1,7 +1,7 @@
-import tap from 'tap';
+import { test, assert } from 'vitest';
 import updatePosition from './updatePosition.mjs';
 
-tap.test('Update player1 position', (t) => {
+test('Update player1 position', () => {
     const state = {
         gameOver: false,
         positions: { player1: 0, player2: 0 }
@@ -11,24 +11,19 @@ tap.test('Update player1 position', (t) => {
     };
     const result = updatePosition(state, positions);
 
-    t.equal(result.positions.player1, 4);
-    t.end();
+    assert.equal(result.positions.player1, 4);
 });
 
-tap.test(
-    'Updating player1 position should not change player2 position',
-    (t) => {
-        const state = {
-            gameOver: false,
-            positions: { player1: 0, player2: 0 }
-        };
-        const positions = {
-            player1: 5
-        };
+test('Updating player1 position should not change player2 position', () => {
+    const state = {
+        gameOver: false,
+        positions: { player1: 0, player2: 0 }
+    };
+    const positions = {
+        player1: 5
+    };
 
-        const result = updatePosition(state, positions);
+    const result = updatePosition(state, positions);
 
-        t.equal(result.positions.player2, 0);
-        t.end();
-    }
-);
+    assert.equal(result.positions.player2, 0);
+});

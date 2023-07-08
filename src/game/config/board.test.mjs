@@ -1,14 +1,12 @@
-import tap from 'tap';
+import { test, assert } from 'vitest';
 import board from './board.mjs';
 
-tap.test('snake positions', (t) => {
+test('snake positions', () => {
     const result = board[7];
-    t.equal(result.type, 'snake');
-    t.end();
+    assert.equal(result.type, 'snake');
 });
 
-tap.test('ladder positions', (t) => {
+test('ladder positions', () => {
     const result = board[4];
-    t.equal(result.type, 'ladder');
-    t.end();
+    assert.equal(result.type, 'ladder');
 });

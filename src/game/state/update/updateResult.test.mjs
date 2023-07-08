@@ -1,7 +1,7 @@
+import { test, assert } from 'vitest';
 import updateResult from './updateResult.mjs';
-import tap from 'tap';
 
-tap.test('Updating game result', (t) => {
+test('Updating game result', () => {
     const state = {
         gameOver: false,
         positions: {
@@ -15,6 +15,5 @@ tap.test('Updating game result', (t) => {
 
     const result = updateResult(state, update);
 
-    t.equal(result.gameOver, true);
-    t.end();
+    assert.equal(result.gameOver, true);
 });

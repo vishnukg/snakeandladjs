@@ -1,4 +1,4 @@
-import tap from 'tap';
+import { test, assert } from 'vitest';
 import { rollDie } from './game/roll/index.mjs';
 
 const createGame = (firstPlayer) => {
@@ -47,59 +47,49 @@ const create_player = () => {
     };
 };
 
-tap.test('Player moves one position starting at zero', (t) => {
+test('Player moves one position starting at zero', () => {
     const player = create_player();
     const newPosition = player.move();
-    t.equal(newPosition, 1);
-    t.end();
+    assert.equal(newPosition, 1);
 });
 
-tap.test('Player moves twice to reach position 2', (t) => {
-    const player = create_player();
-    player.move();
-    const newPosition = player.move();
-    t.equal(newPosition, 2);
-    t.end();
-});
-
-tap.test('Player moves twice to reach position 2', (t) => {
+test('Player moves twice to reach position 2', () => {
     const player = create_player();
     player.move();
     const newPosition = player.move();
-    t.equal(newPosition, 2);
-    t.end();
+    assert.equal(newPosition, 2);
 });
 
-tap.test('Player moves 100 times to finish the game', (t) => {
+test('Player moves twice to reach position 2', () => {
+    const player = create_player();
+    player.move();
+    const newPosition = player.move();
+    assert.equal(newPosition, 2);
+});
+
+test('Player moves 100 times to finish the game', () => {
     const player = create_player();
     const numberOfMoves = 100;
     while (player.move() < numberOfMoves);
-    t.equal(player.finished, true);
-    t.end();
+    assert.equal(player.finished, true);
 });
 
-tap.test(
-    'Player would not finish the game if they dont reach position 100',
-    (t) => {
-        const player = create_player();
-        const numberOfMoves = 99;
-        while (player.move() < numberOfMoves) {
-            t.equal(player.finished, false);
-        }
-
-        t.end();
+test('Player would not finish the game if they dont reach position 100', () => {
+    const player = create_player();
+    const numberOfMoves = 99;
+    while (player.move() < numberOfMoves) {
+        assert.equal(player.finished, false);
     }
-);
+});
 
-tap.test('Player moves by the value returned by the die', (t) => {
+test('Player moves by the value returned by the die', () => {
     const player = create_player();
     const numberOfMoves = rollDie();
     const newPosition = player.move(numberOfMoves);
-    t.equal(newPosition, numberOfMoves);
-    t.end();
+    assert.equal(newPosition, numberOfMoves);
 });
 
-// tap.test('Of two players, the player 2 reaches 100 to win the game', (t) => {
+// test('Of two players, the player 2 reaches 100 to win the game', () => {
 //     const p1 = create_player();
 //     const p2 = create_player();
 //
@@ -108,17 +98,15 @@ tap.test('Player moves by the value returned by the die', (t) => {
 //     const numberOfMoves = 100;
 //     while (game.move(p2) < numberOfMoves);
 //     while (game.move(p1) < numberOfMoves);
-//     t.equal(game.winner, p2);
-//     t.end();
+//     assert.equal(game.winner, p2);
 // });
 
-tap.test('Of two players, second player cannot make the first move', (t) => {
+test('Of two players, second player cannot make the first move', () => {
     const p1 = create_player();
     const p2 = create_player();
 
     const game = createGame(p1);
 
     const result = game.move(p2);
-    t.equal(result, -1);
-    t.end();
+    assert.equal(result, -1);
 });

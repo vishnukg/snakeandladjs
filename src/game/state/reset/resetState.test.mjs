@@ -1,7 +1,7 @@
-import tap from 'tap';
+import { test, assert } from 'vitest';
 import reset from './resetState.mjs';
 
-tap.test('Reset function resets the state to inital value', (t) => {
+test('Reset function resets the state to inital value', () => {
     const state = {
         gameOver: false,
         positions: { player1: 0, player2: 0 }
@@ -9,8 +9,7 @@ tap.test('Reset function resets the state to inital value', (t) => {
 
     const result = reset(state);
 
-    t.equal(result.gameOver, false);
-    t.equal(result.positions.player1, 0);
-    t.equal(result.positions.player2, 0);
-    t.end();
+    assert.equal(result.gameOver, false);
+    assert.equal(result.positions.player1, 0);
+    assert.equal(result.positions.player2, 0);
 });
