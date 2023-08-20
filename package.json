@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.mjs",
     "scripts": {
+        "run-async": "node src/cmd/index.mjs",
         "test": "c8 node --test"
     },
     "author": "",
