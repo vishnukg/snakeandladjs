@@ -10,7 +10,7 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "c8": "^8.0.1",
-        "prettier": "3.1.1"
+        "c8": "^9.1.0",
+        "prettier": "3.2.4"
     }
 }
