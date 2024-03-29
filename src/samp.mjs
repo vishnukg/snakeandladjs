@@ -1,31 +1,31 @@
 class Person {
-  name
-  age
-  constructor(name, age) {
-    this.name = name
-    this.age = age
-  }
+    name
+    age
+    constructor(name, age) {
+        this.name = name
+        this.age = age
+    }
 
-  updateName(name) {
-    this.name = name
-  }
+    updateName(name) {
+        this.name = name
+    }
 }
 
 const person = new Person('vishnu', 15)
 console.log(person.name)
 
 const CreatePerson = ({ name, age }) => {
-  return {
-    updateName(newName) {
-      name = newName
-    },
-    getName() {
-      return name
-    },
-    getAge() {
-      return age
-    },
-  }
+    return {
+        updateName(newName) {
+            name = newName
+        },
+        getName() {
+            return name
+        },
+        getAge() {
+            return age
+        },
+    }
 }
 
 const p2 = CreatePerson({ name: 'harry', age: 8 })
