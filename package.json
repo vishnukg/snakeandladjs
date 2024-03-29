@@ -5,7 +5,13 @@
     "main": "index.mjs",
     "scripts": {
         "run-async": "node src/cmd/index.mjs",
-        "test": "c8 node --test"
+        "test": "c8 node --test",
+        "fix": "node fix:eslint && yarn fix:prettier",
+        "fix:eslint": "eslint --fix \"**/*.*\"",
+        "fix:prettier": "prettier --write \"**/*.*\"",
+        "lint": "node lint:eslint && yarn lint:prettier",
+        "lint:eslint": "eslint \"**/*.*\"",
+        "lint:prettier": "prettier --check \"**/*.*\""
     },
     "author": "",
     "license": "ISC",
